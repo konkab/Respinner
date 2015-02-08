@@ -1,6 +1,8 @@
 # SpinningRefreshControl
 SpinningRefreshControl is a drop in replacement for UIRefreshControl that spins custom UIView inside while scrolling based on contentOffset of UIScrollView. Allows you to use custom spinning view, custom height, etc.
 
+![video](https://cloud.githubusercontent.com/assets/1832821/6097287/224f9006-afda-11e4-9c42-734a59d3c789.gif)
+
 ## Installation
 Drop in the SpinningRefreshControl.swift to your Xcode project.
 
