@@ -7,7 +7,7 @@ Respinner is a drop in replacement for UIRefreshControl that rotates custom UIVi
 Drop in the Respinner.swift to your Xcode project.
 
 Or via CocoaPods pre-release:
-pod 'Respinner'
+`pod 'Respinner'`
 
 ## Usage
 Respinner works the same as UIRefreshControl. After initialization just add it as subview to a UIScrollView, everything else it will manage itself.
