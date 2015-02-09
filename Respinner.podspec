@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Respinner'
-  s.version = '1.0.0'
+  s.version = '0.0.1'
   s.license = 'MIT'
   s.summary = 'Simple, customizable spinning refresh control written in Swift.'
   s.homepage = 'https://github.com/konkab/Respinner'
