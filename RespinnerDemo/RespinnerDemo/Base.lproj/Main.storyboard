@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ILF-rx-K45">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="K0o-oj-k3u">
+            <objects>
+                <navigationController id="ILF-rx-K45" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e82-uN-hSO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XIp-5E-8lE" kind="relationship" relationship="rootViewController" id="W1N-u8-22V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHB-Uc-NJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="740"/>
+        </scene>
+        <!--Respinner-->
+        <scene sceneID="Rh7-C1-1w5">
+            <objects>
+                <viewController id="XIp-5E-8lE" customClass="ViewController" customModule="SpinningRefreshControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eJP-fF-F5h"/>
+                        <viewControllerLayoutGuide type="bottom" id="z4l-tg-gYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lfe-3Z-DEc">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DDE-OH-cli">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" textLabel="ixw-u8-VBk" style="IBUITableViewCellStyleDefault" id="sPr-OF-qkc">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPr-OF-qkc" id="Aa4-Fe-8uW">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ixw-u8-VBk">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XIp-5E-8lE" id="60J-oU-QOU"/>
+                                    <outlet property="delegate" destination="XIp-5E-8lE" id="aEf-QV-HXW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DDE-OH-cli" firstAttribute="top" secondItem="Lfe-3Z-DEc" secondAttribute="top" id="bch-FT-6tH"/>
+                            <constraint firstItem="z4l-tg-gYW" firstAttribute="top" secondItem="DDE-OH-cli" secondAttribute="bottom" id="lH7-iF-wDf"/>
+                            <constraint firstAttribute="trailing" secondItem="DDE-OH-cli" secondAttribute="trailing" id="qMf-Ix-GzG"/>
+                            <constraint firstItem="DDE-OH-cli" firstAttribute="leading" secondItem="Lfe-3Z-DEc" secondAttribute="leading" id="zJ1-X6-ALl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Respinner" id="cOy-l5-UUR"/>
+                    <connections>
+                        <outlet property="tableView" destination="DDE-OH-cli" id="LDI-3a-AqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9a-2A-gV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="740"/>
+        </scene>
+    </scenes>
+</document>

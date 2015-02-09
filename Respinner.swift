@@ -1,5 +1,5 @@
 //
-//  SpinningRefreshControl.swift
+//  Respinner.swift
 //
 //	The MIT License (MIT)
 //
@@ -25,7 +25,7 @@
 
 import UIKit
 
-class SpinningRefreshControl: UIControl {
+class Respinner: UIControl {
 	var spinningView: UIView! {
 		didSet {
 			oldValue.removeFromSuperview()
