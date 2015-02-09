@@ -26,37 +26,35 @@
 import UIKit
 
 class Respinner: UIControl {
-	var spinningView: UIView! {
-		didSet {
-			oldValue.removeFromSuperview()
-			addSubview(spinningView)
-		}
-	}
-	var height = CGFloat(60.0)
-	var animationDuration = CFTimeInterval(2.0)
+	var animationDuration = 2.0
 	var scrollViewDefaultContentInset = UIEdgeInsetsZero
+	private var spinningView: UIView!
+	private var height: CGFloat!
 	private (set) var refreshing: Bool = false
 	private var previousYOffset = CGFloat(0.0)
 	
-	override init() {
+	convenience init(spinningView: UIView) {
+		self.init(spinningView: spinningView, height: 60.0)
+	}
+	
+	init(spinningView: UIView, height: CGFloat) {
 		super.init()
 		
+		self.spinningView = spinningView
+		self.height = height
 		autoresizingMask = .FlexibleWidth
 		backgroundColor = UIColor.clearColor()
-		
-		self.spinningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 30.0, height: 30.0))
-		spinningView.backgroundColor = UIColor.redColor()
 		addSubview(spinningView)
 	}
 	
-	override init(frame: CGRect) {
+	private override init(frame: CGRect) {
 		super.init(frame: frame)
 	}
-
-	required init(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-	}
 	
+	required init(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
+	}
+
 	override func didMoveToSuperview() {
 		super.didMoveToSuperview()
 		
