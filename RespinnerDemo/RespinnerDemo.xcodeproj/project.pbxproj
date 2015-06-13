@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75CEF3B81B2C36A4006B3C4F /* Respinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CEF3B71B2C36A4006B3C4F /* Respinner.swift */; };
 		AB2F58B51A886E45003A548F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F58B41A886E45003A548F /* AppDelegate.swift */; };
 		AB2F58B71A886E45003A548F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F58B61A886E45003A548F /* ViewController.swift */; };
 		AB2F58BA1A886E45003A548F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2F58B81A886E45003A548F /* Main.storyboard */; };
 		AB2F58BC1A886E45003A548F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2F58BB1A886E45003A548F /* Images.xcassets */; };
 		AB2F58BF1A886E45003A548F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2F58BD1A886E45003A548F /* LaunchScreen.xib */; };
 		AB2F58CB1A886E45003A548F /* RespinnerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F58CA1A886E45003A548F /* RespinnerDemoTests.swift */; };
-		AB2F58D51A886E94003A548F /* Respinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F58D41A886E94003A548F /* Respinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75CEF3B71B2C36A4006B3C4F /* Respinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Respinner.swift; path = ../../Respinner.swift; sourceTree = "<group>"; };
 		AB2F58AF1A886E45003A548F /* RespinnerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RespinnerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2F58B31A886E45003A548F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB2F58B41A886E45003A548F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		AB2F58C41A886E45003A548F /* RespinnerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RespinnerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2F58C91A886E45003A548F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB2F58CA1A886E45003A548F /* RespinnerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespinnerDemoTests.swift; sourceTree = "<group>"; };
-		AB2F58D41A886E94003A548F /* Respinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Respinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		AB2F58B11A886E45003A548F /* RespinnerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AB2F58D41A886E94003A548F /* Respinner.swift */,
+				75CEF3B71B2C36A4006B3C4F /* Respinner.swift */,
 				AB2F58B41A886E45003A548F /* AppDelegate.swift */,
 				AB2F58B61A886E45003A548F /* ViewController.swift */,
 				AB2F58B81A886E45003A548F /* Main.storyboard */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2F58D51A886E94003A548F /* Respinner.swift in Sources */,
+				75CEF3B81B2C36A4006B3C4F /* Respinner.swift in Sources */,
 				AB2F58B71A886E45003A548F /* ViewController.swift in Sources */,
 				AB2F58B51A886E45003A548F /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +409,7 @@
 				AB2F58D01A886E45003A548F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB2F58D11A886E45003A548F /* Build configuration list for PBXNativeTarget "RespinnerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				AB2F58D31A886E45003A548F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

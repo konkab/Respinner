@@ -25,7 +25,7 @@
 
 import UIKit
 
-class Respinner: UIControl {
+public class Respinner: UIControl {
 	var animationDuration = 2.0
 	var scrollViewDefaultContentInset = UIEdgeInsetsZero
 	private var spinningView: UIView!
@@ -51,11 +51,11 @@ class Respinner: UIControl {
 		super.init(frame: frame)
 	}
 	
-	required init(coder aDecoder: NSCoder) {
+	required public init(coder aDecoder: NSCoder) {
 	    fatalError("init(coder:) has not been implemented")
 	}
 
-	override func didMoveToSuperview() {
+	override public func didMoveToSuperview() {
 		super.didMoveToSuperview()
 		
 		if let scrollView = self.superview as? UIScrollView {
@@ -65,13 +65,13 @@ class Respinner: UIControl {
 		}
 	}
 	
-	override func layoutSubviews() {
+	override public func layoutSubviews() {
 		super.layoutSubviews()
 
 		spinningView.center = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
 	}
 	
-	override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+	override public func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
 		let scrollView = self.superview as! UIScrollView
 		
 		if object as? UIScrollView == scrollView {
