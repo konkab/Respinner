@@ -30,7 +30,7 @@ public class Respinner: UIControl {
 	var scrollViewDefaultContentInset = UIEdgeInsetsZero
 	private var spinningView: UIView!
 	private var height: CGFloat!
-	private (set) var refreshing: Bool = false
+    private (set) public var refreshing: Bool = false
 	private var previousYOffset = CGFloat(0.0)
 	
 	convenience init(spinningView: UIView) {
