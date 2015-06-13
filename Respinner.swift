@@ -38,7 +38,7 @@ class Respinner: UIControl {
 	}
 	
 	init(spinningView: UIView, height: CGFloat) {
-		super.init()
+		super.init(frame: CGRectZero)
 		
 		self.spinningView = spinningView
 		self.height = height
@@ -72,7 +72,7 @@ class Respinner: UIControl {
 	}
 	
 	override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-		let scrollView = self.superview as UIScrollView
+		let scrollView = self.superview as! UIScrollView
 		
 		if object as? UIScrollView == scrollView {
 			if keyPath == "contentOffset" {
@@ -110,7 +110,7 @@ class Respinner: UIControl {
 		
 		spinningView.layer.addAnimation(animation, forKey: "rotate")
 		
-		let scrollView = self.superview as UIScrollView
+		let scrollView = self.superview as! UIScrollView
 		scrollView.contentOffset.y = previousYOffset
 		
 		UIView.animateWithDuration(0.3, delay: 0.0, options: .AllowUserInteraction, animations: { () -> Void in
@@ -124,7 +124,7 @@ class Respinner: UIControl {
 		
 		spinningView.layer.removeAnimationForKey("rotate")
 		
-		let scrollView = self.superview as UIScrollView
+		let scrollView = self.superview as! UIScrollView
 		
 		UIView.animateWithDuration(0.3, delay: 0.0, options: .AllowUserInteraction, animations: { () -> Void in
 			scrollView.contentInset = self.scrollViewDefaultContentInset
